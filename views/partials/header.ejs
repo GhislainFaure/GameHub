@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GameHub</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <% if(locals.cssSuplementaire) { %>
+  <link rel="stylesheet" href="<%= locals.cssSuplementaire %>">
+  <% } %>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="/">GameHub</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/game/fourchette">fourchette</a></li>
+        <li><a href="/game/diceRoller">diceRoller</a></li>
+      </ul>
+      
+     
+    </nav>
+  </header>
+
+  <main>
