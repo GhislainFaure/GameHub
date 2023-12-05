@@ -6,7 +6,7 @@
   <title>GameHub</title>
   <link rel="stylesheet" href="/css/style.css">
   <% if(locals.cssSuplementaire) { %>
-  <link rel="stylesheet" href="<%= locals.cssSuplementaire %>">
+  <link rel="stylesheet" href="/css/<%= locals.cssSuplementaire %>">
   <% } %>
 </head>
 
@@ -17,8 +17,10 @@
     </h1>
     <nav>
       <ul>
-        <li><a href="/game/fourchette">fourchette</a></li>
-        <li><a href="/game/diceRoller">diceRoller</a></li>
+        <% for(const game of locals.games){ %>
+          <li><a href="/game/<%= game.name %>"><%= game.title %></a></li>
+          <% } %>
+     
       </ul>
       
      
